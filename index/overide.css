@@ -1,0 +1,12 @@
+#page-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #E45678;
+    background-image: image-set('bg1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 90%;
+}
+.pc{
+    display: block;
+}
