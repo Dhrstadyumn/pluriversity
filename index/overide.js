@@ -9,9 +9,7 @@ function resizeToFit() {
         if (scale > 1) {
             scale = 1
         }
-        // container.style.transform = `scale(${scale})`;
         html.style.transform = `scale(${scale})`
-        container.style.left = `-${scale}px`
     }
     else {
         const container = document.getElementById('page-container');
@@ -22,5 +20,5 @@ function resizeToFit() {
     }
 }
 
+window.addEventListener('load', resizeToFit);
 window.addEventListener('resize', resizeToFit);
-resizeToFit();
