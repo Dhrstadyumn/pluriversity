@@ -15,7 +15,9 @@ function resizeToFit() {
         container.style.left = '';
         html.style.transform = '';
     }
+    console.log('executed')
 }
-
+resizeToFit()
 window.addEventListener('DOMContentLoaded', resizeToFit);
 window.addEventListener('resize', resizeToFit);
+window.addEventListener('load', resizeToFit);
