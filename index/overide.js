@@ -3,9 +3,6 @@ function resizeToFit() {
         const html = document.documentElement;
         const container = document.getElementById('page-container');
         let scale = window.innerWidth / container.offsetWidth;
-        console.log(window.innerWidth)
-        console.log(container.offsetWidth)
-        console.log(scale)
         if (scale > 1) {
             scale = 1
         }
@@ -20,5 +17,5 @@ function resizeToFit() {
     }
 }
 
-window.addEventListener('load', resizeToFit);
+window.addEventListener('DOMContentLoaded', resizeToFit);
 window.addEventListener('resize', resizeToFit);
