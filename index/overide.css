@@ -1,3 +1,16 @@
+#page-container::-webkit-scrollbar {
+    width: 0.3em;
+}
+ 
+#page-container::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+#page-container::-webkit-scrollbar-thumb {
+  background-color: #E45678;
+  outline: 1px solid #FBC9DB;
+}
+
 @media (min-width: 596px) {
     #page-container {
         display: flex;
@@ -25,7 +38,7 @@
 
 @media (max-width: 595px) {
 
-    body, html {
+    #page-container, html {
     margin: 0;
     padding: 0;
     height: 0;
@@ -37,9 +50,9 @@
     }
     
     #page-container {
-        float: left;
         display: flex;
         flex-wrap: wrap;
+        justify-content: center;
         background-image: none;
         background-color: #E45678;
         position: absolute;

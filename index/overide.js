@@ -1,23 +1,19 @@
 function resizeToFit() {
-    if (window.innerWidth <= 595) {
+    let width = document.documentElement.clientWidth
+    console.log(width)
+    if (width >= 596) {
+        const html = document.documentElement;
+        html.style.transform = '';
+    }
+    else {
         const html = document.documentElement;
         const container = document.getElementById('page-container');
-        let scale = window.innerWidth / container.offsetWidth;
+        let scale = width / container.offsetWidth;
         if (scale > 1) {
             scale = 1
         }
         html.style.transform = `scale(${scale})`
     }
-    else {
-        const container = document.getElementById('page-container');
-        const html = document.documentElement;
-        container.style.transform = '';
-        container.style.left = '';
-        html.style.transform = '';
-    }
-    console.log('executed')
 }
-resizeToFit()
 window.addEventListener('DOMContentLoaded', resizeToFit);
 window.addEventListener('resize', resizeToFit);
-window.addEventListener('load', resizeToFit);
