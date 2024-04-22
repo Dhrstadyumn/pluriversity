@@ -1,6 +1,5 @@
 function resizeToFit() {
     let width = document.documentElement.clientWidth
-    console.log(width)
     if (width >= 596) {
         const html = document.documentElement;
         html.style.transform = '';
